@@ -2,26 +2,17 @@
 
 a:
     INBOX
-    JUMPZ    f
     COPYTO   0
-    JUMPN    c
-    OUTBOX
+    JUMPN    d
 b:
-    COPYFROM 0
-    BUMPDN   0
-    JUMPZ    g
-    OUTBOX
-    JUMP     b
 c:
     OUTBOX
+    BUMPDN   0
+    JUMPN    a
+    JUMP     b
 d:
-    COPYFROM 0
-    BUMPUP   0
-    JUMPZ    e
-    OUTBOX
-    JUMP     d
 e:
-f:
-g:
     OUTBOX
-    JUMP     a
+    BUMPUP   0
+    JUMPZ    c
+    JUMP     e
