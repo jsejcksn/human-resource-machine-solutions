@@ -3,16 +3,14 @@
 a:
     INBOX
     COPYTO   0
-    JUMPN    d
+    JUMP     c
 b:
+    OUTBOX
+    BUMPUP   0
 c:
+    JUMPN    b
+d:
     OUTBOX
     BUMPDN   0
     JUMPN    a
-    JUMP     b
-d:
-e:
-    OUTBOX
-    BUMPUP   0
-    JUMPZ    c
-    JUMP     e
+    JUMP     d
